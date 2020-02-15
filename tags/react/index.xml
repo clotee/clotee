@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>React on 大冰 Black.Clotee</title>
+    <link>http://example.org/tags/react/</link>
+    <description>Recent content in React on 大冰 Black.Clotee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 15 Feb 2020 17:21:31 +0800</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>React Base</title>
+      <link>http://example.org/react/react-base/</link>
+      <pubDate>Sat, 15 Feb 2020 17:21:31 +0800</pubDate>
+      
+      <guid>http://example.org/react/react-base/</guid>
+      <description>&lt;p&gt;芃芃和我一起写代码。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
