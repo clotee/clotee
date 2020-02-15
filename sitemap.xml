@@ -3,37 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/categories/cat/</loc>
+    <loc>http://blog.clotee.cn/categories/cat/</loc>
     <lastmod>2020-02-14T22:19:03+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/cat/</loc>
+    <loc>http://blog.clotee.cn/tags/cat/</loc>
     <lastmod>2020-02-14T22:19:03+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>http://blog.clotee.cn/categories/</loc>
     <lastmod>2020-02-14T22:19:03+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/</loc>
+    <loc>http://blog.clotee.cn/posts/</loc>
     <lastmod>2020-02-14T22:19:03+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>http://blog.clotee.cn/tags/</loc>
     <lastmod>2020-02-14T22:19:03+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>http://blog.clotee.cn/</loc>
     <lastmod>2020-02-14T22:19:03+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/my-first-post/</loc>
+    <loc>http://blog.clotee.cn/posts/my-first-post/</loc>
     <lastmod>2020-02-14T22:19:03+08:00</lastmod>
   </url>
   
