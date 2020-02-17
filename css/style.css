@@ -499,6 +499,7 @@ a.article-title:hover,
   height: auto;
   display: block;
   margin: auto;
+  border-radius: 9px;
 }
 .article-entry iframe {
   border: none;
@@ -731,8 +732,10 @@ a.article-title:hover,
 .archive-year-wrap,
 .archive-category-wrap,
 .archive-tag-wrap {
-  font-size: 1.4em;
+  font-size: 1.6em;
   margin-bottom: 1em;
+  margin-top: 4em;
+  font-weight: bold;
 }
 .archives {
   margin-left: 5px;
