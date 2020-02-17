@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on 大冰 Black.Clotee</title>
+    <link>https://blog.clotee.cn/about/</link>
+    <description>Recent content in Abouts on 大冰 Black.Clotee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 17 Feb 2020 23:49:15 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.clotee.cn/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About Me</title>
+      <link>https://blog.clotee.cn/about/about-me/</link>
+      <pubDate>Mon, 17 Feb 2020 23:49:15 +0800</pubDate>
+      
+      <guid>https://blog.clotee.cn/about/about-me/</guid>
+      <description>关于我</description>
+    </item>
+    
+  </channel>
+</rss>
