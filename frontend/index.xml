@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FrontEnds on 大冰 Black.Clotee</title>
+    <link>http://blog.clotee.cn/frontend/</link>
+    <description>Recent content in FrontEnds on 大冰 Black.Clotee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 15 Feb 2020 20:11:02 +0800</lastBuildDate>
+    
+	<atom:link href="http://blog.clotee.cn/frontend/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Webpack Base Md</title>
+      <link>http://blog.clotee.cn/frontend/webpack-base/</link>
+      <pubDate>Sat, 15 Feb 2020 20:11:02 +0800</pubDate>
+      
+      <guid>http://blog.clotee.cn/frontend/webpack-base/</guid>
+      <description>Webpack 前端资源加载&amp;amp;打包工具 </description>
+    </item>
+    
+  </channel>
+</rss>

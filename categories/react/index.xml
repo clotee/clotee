@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>React Base</title>
+      <title>React的基础知识</title>
       <link>http://blog.clotee.cn/react/react-base/</link>
       <pubDate>Sat, 15 Feb 2020 17:21:31 +0800</pubDate>
       
       <guid>http://blog.clotee.cn/react/react-base/</guid>
-      <description>&lt;p&gt;芃芃和我一起写代码。&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;声明式编程、组件化、组件通讯、组件生命周期、时间系统、组件写法、组件分类。&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

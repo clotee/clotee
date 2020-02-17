@@ -6,10 +6,19 @@
     <description>Recent content on 大冰 Black.Clotee</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 14 Feb 2020 22:19:03 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 15 Feb 2020 17:21:31 +0800</lastBuildDate>
     
 	<atom:link href="http://blog.clotee.cn/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>React的基础知识</title>
+      <link>http://blog.clotee.cn/react/react-base/</link>
+      <pubDate>Sat, 15 Feb 2020 17:21:31 +0800</pubDate>
+      
+      <guid>http://blog.clotee.cn/react/react-base/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;声明式编程、组件化、组件通讯、组件生命周期、时间系统、组件写法、组件分类。&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>我和芃芃</title>
