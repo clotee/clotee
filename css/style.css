@@ -279,8 +279,11 @@ a.article-title:hover,
 }
 #header {
   font-size: 14px;
-  position: relative;
-  border-bottom: 1px solid #ddd;
+  position: fixed;
+  /* border-bottom: 1px solid #ddd; */
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 10px 5px #ededed;
 }
 #header.mobile-on #main-nav,
 #header.mobile-on #sub-nav {
@@ -398,9 +401,13 @@ a.article-title:hover,
   background: none;
   cursor: pointer;
 }
+
 .article {
   margin: 50px 0;
   border-bottom: 1px solid #ddd;
+}
+.article:first-child {
+  margin-top: 100px !important;
 }
 .article-inner {
   margin-bottom: 15px;
