@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>React Router 的简单使用 // 大冰 Black.Clotee</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="author" content="大冰 (Black.clotee) ">
+    
+    
+
+        <meta property="og:title" content="React Router 的简单使用" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh" />
+    <meta property="og:url" content="https://blog.clotee.cn/react/react-router/" />
+    
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <link href="https://blog.clotee.cn/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+    <link href="https://blog.clotee.cn/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://blog.clotee.cn/css/style.css">
+    
+
+    <meta name="generator" content="Hugo 0.64.1" />
+</head>
+
+
+<body>
+<div id="container">
+    <header id="header">
+    <div id="header-outer" class="outer">
+        <div id="header-inner" class="inner">
+            <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+            <a id="logo" class="logo-text" href="https://blog.clotee.cn/">大冰 Black.Clotee</a>
+            <nav id="main-nav">
+              
+                
+                
+                <a class="main-nav-link" href="/categories/react/">React</a>
+                
+              
+                
+                
+                <a class="main-nav-link" href="/categories/about/">关于我</a>
+                
+              
+            </nav>
+            <nav id="sub-nav">
+                <div id="search-form-wrap">
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <section id="main" class="outer">
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            <h1 class="article-title" itemprop="name">React Router 的简单使用</h1>
+        </header>
+        
+        <div class="article-meta">
+            <a href="/react/react-router/" class="article-date">
+                <time datetime='2020-02-26T16:55:50.000&#43;08:00' itemprop="datePublished">2020-02-26</time>
+            </a>
+            
+            
+            <div class="post-categories">
+                <div class="article-category">
+                    
+                    
+                    <a class="article-category-link" href="https://blog.clotee.cn//categories/react">React</a>
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="版本说明">版本说明</h2>
+<p><strong>REACT ROUTER：5.1.2</strong><br>
+<strong>ReactJS :16.12</strong></p>
+<h2 id="1-安装">1. 安装</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm install -S react-router-dom history
+<span style="color:#75715e"># OR</span>
+yarn add -S react-router-dom history
+
+</code></pre></div><h2 id="2-引入配置">2. 引入配置</h2>
+<p><strong>app.jsx</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">BrowserRouter</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">Router</span>, <span style="color:#a6e22e">Switch</span>, <span style="color:#a6e22e">Route</span>, <span style="color:#a6e22e">Link</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react-router-dom&#34;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">HomePage</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;_pages/HomePage&#39;</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">AboutPage</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;_pages/AboutPage&#39;</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">UsersPage</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;_pages/UsersPage&#39;</span>
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+  <span style="color:#66d9ef">return</span> (
+    &lt;<span style="color:#f92672">Router</span>&gt;
+      &lt;<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">nav</span>&gt;
+
+          &lt;<span style="color:#f92672">ul</span>&gt;
+            &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">Link</span> <span style="color:#a6e22e">to</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/&#34;</span>&gt;<span style="color:#a6e22e">Home</span>&lt;/<span style="color:#f92672">Link</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+            &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">Link</span> <span style="color:#a6e22e">to</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/about&#34;</span>&gt;<span style="color:#a6e22e">About</span>&lt;/<span style="color:#f92672">Link</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+            &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">Link</span> <span style="color:#a6e22e">to</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/users&#34;</span>&gt;<span style="color:#a6e22e">Users</span>&lt;/<span style="color:#f92672">Link</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+          &lt;/<span style="color:#f92672">ul</span>&gt;
+        &lt;/<span style="color:#f92672">nav</span>&gt;
+
+        {<span style="color:#75715e">/* A &lt;Switch&gt; looks through its children &lt;Route&gt;s and
+</span><span style="color:#75715e">            renders the first one that matches the current URL. */</span>}
+        &lt;<span style="color:#f92672">Switch</span>&gt;
+          &lt;<span style="color:#f92672">Route</span> <span style="color:#a6e22e">path</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/about&#34;</span> <span style="color:#a6e22e">component</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">AboutPage</span>} /&gt;
+          &lt;<span style="color:#f92672">Route</span> <span style="color:#a6e22e">path</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/users&#34;</span> <span style="color:#a6e22e">component</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">UsersPage</span>}/&gt;
+          &lt;<span style="color:#f92672">Route</span> <span style="color:#a6e22e">path</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/&#34;</span> <span style="color:#a6e22e">component</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">HomePage</span>} /&gt;
+        &lt;/<span style="color:#f92672">Switch</span>&gt;
+      &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">Router</span>&gt;
+  );
+}
+</code></pre></div><h2 id="3-路由跳转">3. 路由跳转</h2>
+<h3 id="31-linknavlinkredirect">3.1 Link、NavLink、Redirect</h3>
+<h4 id="link-">&lt;Link /&gt;</h4>
+<p><em>参数： to: string\object\function、replace: bool、innerRef: function 、innerRef: RefObject</em></p>
+<h5 id="to-stringobjectfunction"><em>to: string/object/function</em></h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#75715e">// string
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Link</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react-router-dom&#34;</span>;
+&lt;<span style="color:#f92672">Link</span> <span style="color:#a6e22e">to</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/about&#34;</span>&gt;<span style="color:#a6e22e">About</span>&lt;/<span style="color:#f92672">Link</span>&gt;
+
+<span style="color:#75715e">// to: object
+</span><span style="color:#75715e"></span>&lt;<span style="color:#f92672">Link</span>
+  <span style="color:#a6e22e">to</span><span style="color:#f92672">=</span>{{
+    <span style="color:#a6e22e">pathname</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;/courses&#34;</span>,
+    <span style="color:#a6e22e">search</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;?sort=name&#34;</span>,
+    <span style="color:#a6e22e">hash</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;#the-hash&#34;</span>,
+    <span style="color:#a6e22e">state</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">fromDashboard</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> }
+  }}
+/&gt;
+<span style="color:#75715e">// to: function
+</span><span style="color:#75715e"></span>&lt;<span style="color:#f92672">Link</span> <span style="color:#a6e22e">to</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">location</span> =&gt; ({ ...<span style="color:#a6e22e">location</span>, <span style="color:#a6e22e">pathname</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;/courses&#34;</span> })} /&gt;
+&lt;<span style="color:#f92672">Link</span> <span style="color:#a6e22e">to</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">location</span> =&gt; <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">pathname</span><span style="color:#e6db74">}</span><span style="color:#e6db74">?sort=name</span><span style="color:#e6db74">`</span>} /&gt;
+
+</code></pre></div><h5 id="replace-bool"><em>replace: bool</em></h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Link</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react-router-dom&#34;</span>;
+&lt;<span style="color:#f92672">Link</span> <span style="color:#a6e22e">to</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/about&#34;</span> <span style="color:#a6e22e">replace</span> /&gt;
+
+</code></pre></div><h5 id="innerref-functionrefobject"><em>innerRef: Function/RefObject</em></h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#75715e">// Function
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Link</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react-router-dom&#34;</span>;
+&lt;<span style="color:#f92672">Link</span>
+  <span style="color:#a6e22e">to</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/&#34;</span>
+  <span style="color:#a6e22e">innerRef</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">node</span> =&gt; {
+    <span style="color:#75715e">// `node` refers to the mounted DOM element
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// or null when unmounted
+</span><span style="color:#75715e"></span>  }}
+/&gt;
+<span style="color:#75715e">// RefObject
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">anchorRef</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">createRef</span>()
+
+&lt;<span style="color:#f92672">Link</span> <span style="color:#a6e22e">to</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/&#34;</span> <span style="color:#a6e22e">innerRef</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">anchorRef</span>} /&gt;
+
+</code></pre></div><h4 id="navlink-">&lt;NavLink /&gt;</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx">
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">NavLink</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react-router-dom&#34;</span>;
+&lt;<span style="color:#f92672">NavLink</span> <span style="color:#a6e22e">exact</span> <span style="color:#a6e22e">to</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">path</span>} <span style="color:#a6e22e">activeClassName</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;selected&#34;</span> &gt;&lt;/<span style="color:#f92672">NavLink</span>&gt;
+
+<span style="color:#75715e">// activeStyle
+</span><span style="color:#75715e"></span>&lt;<span style="color:#f92672">NavLink</span>
+  <span style="color:#a6e22e">to</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/faq&#34;</span>
+  <span style="color:#a6e22e">activeStyle</span><span style="color:#f92672">=</span>{{
+    <span style="color:#a6e22e">fontWeight</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;bold&#34;</span>,
+    <span style="color:#a6e22e">color</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;red&#34;</span>
+  }}
+&gt;
+  <span style="color:#a6e22e">FAQs</span>
+&lt;/<span style="color:#f92672">NavLink</span>&gt;
+</code></pre></div><h4 id="redirect-">&lt;Redirect /&gt;</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx">
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Redirect</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react-router-dom&#34;</span>;
+&lt;<span style="color:#f92672">Redirect</span> <span style="color:#a6e22e">push</span> <span style="color:#a6e22e">to</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">path</span>} &gt;&lt;/<span style="color:#f92672">Redirect</span>&gt;
+
+</code></pre></div><h3 id="32-history">3.2 history</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">createBrowserHistory</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;history&#39;</span>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">history</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createBrowserHistory</span>();
+&lt;<span style="color:#f92672">Router</span> <span style="color:#a6e22e">history</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">history</span>}&gt;
+      ...
+&lt;/<span style="color:#f92672">Router</span>&gt;
+
+<span style="color:#75715e">// history.push(path, [state])
+</span><span style="color:#75715e"></span><span style="color:#75715e">// history.replace(path, [state])
+</span><span style="color:#75715e"></span><span style="color:#75715e">// history.go(n)
+</span><span style="color:#75715e"></span><span style="color:#75715e">// history.goBack() 等价于 history.go(-1)
+</span><span style="color:#75715e"></span><span style="color:#75715e">// history.goForward() 等价于 history.go(1)
+</span></code></pre></div><h3 id="33-withrouter">3.3 withRouter</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">PropTypes</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;prop-types&#34;</span>;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">withRouter</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react-router&#34;</span>;
+
+<span style="color:#75715e">// A simple component that shows the pathname of the current location
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ShowTheLocation</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">Component</span> {
+  <span style="color:#66d9ef">static</span> <span style="color:#a6e22e">propTypes</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">match</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">PropTypes</span>.<span style="color:#a6e22e">object</span>.<span style="color:#a6e22e">isRequired</span>,
+    <span style="color:#a6e22e">location</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">PropTypes</span>.<span style="color:#a6e22e">object</span>.<span style="color:#a6e22e">isRequired</span>,
+    <span style="color:#a6e22e">history</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">PropTypes</span>.<span style="color:#a6e22e">object</span>.<span style="color:#a6e22e">isRequired</span>
+  };
+
+  <span style="color:#a6e22e">render</span>() {
+    <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">match</span>, <span style="color:#a6e22e">location</span>, <span style="color:#a6e22e">history</span> } <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>;
+
+    <span style="color:#66d9ef">return</span>(&lt;<span style="color:#f92672">div</span>&gt;
+                &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span>{()=&gt; <span style="color:#a6e22e">history</span>.<span style="color:#a6e22e">push</span>(<span style="color:#e6db74">&#39;/some/Path&#39;</span>)}&gt;<span style="color:#a6e22e">history</span> <span style="color:#a6e22e">push</span>&lt;/<span style="color:#f92672">div</span>&gt;
+                &lt;<span style="color:#f92672">div</span>&gt;<span style="color:#a6e22e">You</span> <span style="color:#a6e22e">are</span> <span style="color:#a6e22e">now</span> <span style="color:#a6e22e">at</span> {<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">pathname</span>}&lt;/<span style="color:#f92672">div</span>&gt;
+            &lt;/<span style="color:#f92672">div</span>&gt;
+    )
+  }
+}
+
+<span style="color:#75715e">// Create a new component that is &#34;connected&#34; (to borrow redux
+</span><span style="color:#75715e"></span><span style="color:#75715e">// terminology) to the router.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ShowTheLocationWithRouter</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">withRouter</span>(<span style="color:#a6e22e">ShowTheLocation</span>);
+</code></pre></div><h2 id="4-路由传参">4. 路由传参</h2>
+<h3 id="41-通过query传参">4.1 通过Query传参</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#75715e">// 传送
+</span><span style="color:#75715e"></span>&lt;<span style="color:#f92672">Link</span> <span style="color:#a6e22e">to</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/account?name=netflix&#34;</span>&gt;<span style="color:#a6e22e">Netflix</span>&lt;/<span style="color:#f92672">Link</span>&gt;
+<span style="color:#75715e">// 接收
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">name</span> } <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">query</span>
+</code></pre></div><h3 id="42-通过params传参">4.2 通过Params传参</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#75715e">// 传送
+</span><span style="color:#75715e"></span>&lt;<span style="color:#f92672">Link</span> <span style="color:#a6e22e">to</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/account?name=netflix&#34;</span>&gt;<span style="color:#a6e22e">Netflix</span>&lt;/<span style="color:#f92672">Link</span>&gt;
+<span style="color:#75715e">// 接收
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">name</span> } <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">params</span>
+</code></pre></div><h3 id="43-通过state传参">4.3 通过State传参</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#75715e">// Link
+</span><span style="color:#75715e"></span>&lt;<span style="color:#f92672">Link</span> <span style="color:#a6e22e">to</span><span style="color:#f92672">=</span>{{ <span style="color:#a6e22e">pathname</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39; /account&#39;</span> , <span style="color:#a6e22e">state</span> <span style="color:#f92672">:</span> { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;netflix&#39;</span> }}}&gt; 
+<span style="color:#75715e">// 事件 - history.js
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">history</span>.<span style="color:#a6e22e">push</span>(<span style="color:#e6db74">&#39;/account&#39;</span>, { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;netflix&#39;</span> });
+<span style="color:#75715e">// 事件 - this.props.history
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">history</span>.<span style="color:#a6e22e">push</span>({
+    <span style="color:#a6e22e">pathname</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/account&#39;</span>,
+    <span style="color:#a6e22e">state</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;netflix&#39;</span> }
+})
+
+<span style="color:#75715e">// 接收 - history.js
+</span><span style="color:#75715e"></span><span style="color:#75715e">// import { createBrowserHistory } from &#39;history&#39;;
+</span><span style="color:#75715e"></span><span style="color:#75715e">// const history = createBrowserHistory();
+</span><span style="color:#75715e"></span><span style="color:#75715e">// Get the current location.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">location</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">history</span>.<span style="color:#a6e22e">location</span>;
+<span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">name</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">state</span>
+
+<span style="color:#75715e">// 接收 - this.props.history
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">name</span> } <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">state</span>
+</code></pre></div><h2 id="5-hooks-react--168-">5 Hooks [React &gt;= 16.8 ]</h2>
+<p><a href="https://reacttraining.com/react-router/web/api/Hooks">React-router:Hooks</a></p>
+<h2 id="6-routers">6. Routers</h2>
+<h3 id="61--browserrouter-">6.1 &lt; BrowserRouter &gt;</h3>
+<p>常规URL，如使用服务端渲染，需要使用此模式。为微信平台开发用到一些回调地址等，也需要此模式，哈希模式，#之后部分（包括#）不会发送到服务端，会造成URL不匹配等类似麻烦。</p>
+<h3 id="61--hashrouter-">6.1 &lt; HashRouter &gt;</h3>
+<p>哈希模式，如：http://example.com/#/your/page</p>
+        </div>
+
+        
+        
+        <div class="article-toc" >
+            <h3></h3>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#版本说明">版本说明</a></li>
+    <li><a href="#1-安装">1. 安装</a></li>
+    <li><a href="#2-引入配置">2. 引入配置</a></li>
+    <li><a href="#3-路由跳转">3. 路由跳转</a>
+      <ul>
+        <li><a href="#31-linknavlinkredirect">3.1 Link、NavLink、Redirect</a></li>
+        <li><a href="#32-history">3.2 history</a></li>
+        <li><a href="#33-withrouter">3.3 withRouter</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-路由传参">4. 路由传参</a>
+      <ul>
+        <li><a href="#41-通过query传参">4.1 通过Query传参</a></li>
+        <li><a href="#42-通过params传参">4.2 通过Params传参</a></li>
+        <li><a href="#43-通过state传参">4.3 通过State传参</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-hooks-react--168-">5 Hooks [React >= 16.8 ]</a></li>
+    <li><a href="#6-routers">6. Routers</a>
+      <ul>
+        <li><a href="#61--browserrouter-">6.1 < BrowserRouter ></a></li>
+        <li><a href="#61--hashrouter-">6.1 < HashRouter ></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+        
+        
+
+        
+
+
+        
+        <footer class="article-footer">
+            <ul class="article-tag-list">
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="https://blog.clotee.cn//tags/react">React
+                    </a>
+                </li>
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="https://blog.clotee.cn//tags/react-router">React Router
+                    </a>
+                </li>
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="https://blog.clotee.cn//tags/history">history
+                    </a>
+                </li>
+                
+            </ul>
+        </footer>
+        
+    </div>
+    <nav id="article-nav">
+    
+    
+    <a href="/about/about-me/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">About Me&nbsp;<span>&gt;</span></div>
+    </a>
+    
+</nav>
+
+</article>
+
+        
+    </section>
+    <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2020 大冰 Black.Clotee
+            <br />
+            Powered by <a href="https://gohugo.io" target="_blank">Hugo</a>
+            
+        </div>
+    </div>
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow-night.min.css" integrity="sha256-2wL88NKUqvJi/ExflDzkzUumjUM73mcK2gBvBBeLvTk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    <script>
+        document.getElementById('main-nav-toggle').addEventListener('click', function () {
+            var header = document.getElementById('header');
+            if (header.classList.contains('mobile-on')) {
+                header.classList.remove('mobile-on');
+            } else {
+                header.classList.add('mobile-on');
+            }
+        });
+    </script>
+</footer>
+
+</div>
+</body>
+</html>

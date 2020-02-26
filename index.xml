@@ -6,10 +6,21 @@
     <description>Recent content on 大冰 Black.Clotee</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 17 Feb 2020 23:49:15 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 26 Feb 2020 16:55:50 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.clotee.cn/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>React Router 的简单使用</title>
+      <link>https://blog.clotee.cn/react/react-router/</link>
+      <pubDate>Wed, 26 Feb 2020 16:55:50 +0800</pubDate>
+      
+      <guid>https://blog.clotee.cn/react/react-router/</guid>
+      <description>&lt;h2 id=&#34;版本说明&#34;&gt;版本说明&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;REACT ROUTER：5.1.2&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;ReactJS :16.12&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>About Me</title>
@@ -27,15 +38,6 @@
       
       <guid>https://blog.clotee.cn/react/react-base/</guid>
       <description>&lt;p&gt;&lt;strong&gt;声明式编程、组件化、组件通讯、组件生命周期、时间系统、组件写法、组件分类。&lt;/strong&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>我和芃芃</title>
-      <link>https://blog.clotee.cn/posts/my-first-post/</link>
-      <pubDate>Fri, 14 Feb 2020 22:19:03 +0800</pubDate>
-      
-      <guid>https://blog.clotee.cn/posts/my-first-post/</guid>
-      <description>&lt;p&gt;芃芃和我一起写代码。&lt;/p&gt;</description>
     </item>
     
   </channel>

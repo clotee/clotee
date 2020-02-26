@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DB on 大冰 Black.Clotee</title>
+    <link>https://blog.clotee.cn/categories/db/</link>
+    <description>Recent content in DB on 大冰 Black.Clotee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 18 Feb 2020 21:00:39 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.clotee.cn/categories/db/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bd Base</title>
+      <link>https://blog.clotee.cn/db/db-base/</link>
+      <pubDate>Tue, 18 Feb 2020 21:00:39 +0800</pubDate>
+      
+      <guid>https://blog.clotee.cn/db/db-base/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
